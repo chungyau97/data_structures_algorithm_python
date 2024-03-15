@@ -11,8 +11,16 @@ class LinkedList:
         node = Node(data, self.head)
         self.head = node
 
+    def is_empty(self, do_print = False):
+        is_empty = self.head is None
+
+        if is_empty == True and do_print == True:
+            print('Linked List is empty.')
+        
+        return is_empty
+
     def insert_at_end(self, data):
-        if self.head is None:
+        if self.is_empty() == True:
             self.insert_at_begining(data)
             return
         
@@ -22,8 +30,7 @@ class LinkedList:
         node.next = Node(data, None)
     
     def print(self):
-        if self.head is None:
-            print('Linked List is empty.')
+        if self.is_empty(True) == True:
             return
         
         node = self.head
@@ -91,12 +98,12 @@ class LinkedList:
             node = node.next
             count += 1
 
-linked_list = LinkedList()
-linked_list.print()
-linked_list.insert_values(["banana","mango","grapes","orange"])
-linked_list.print()
-linked_list.insert_at(-1, 'pineapple')
-linked_list.insert_at(3, 'pineapple')
-linked_list.print()
-linked_list.remove_at(3)
-linked_list.print()
+# linked_list = LinkedList()
+# linked_list.print()
+# linked_list.insert_values(["banana","mango","grapes","orange"])
+# linked_list.print()
+# linked_list.insert_at(-1, 'pineapple')
+# linked_list.insert_at(3, 'pineapple')
+# linked_list.print()
+# linked_list.remove_at(3)
+# linked_list.print()
