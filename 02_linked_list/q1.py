@@ -22,15 +22,17 @@ class LinkedList(linked_list.LinkedList):
         if self.is_empty(True):
             return
         
-        index = 0 
+        if self.head.data == data_to_remove:
+            self.head = self.head.next
+            return
+
         node = self.head
-        while node:
-            if node.data == data_to_remove:
-                self.remove_at(index)
+        while node.next:
+            if node.next.data == data_to_remove:
+                node.next = node.next.next
                 return
             
             node = node.next
-            index += 1
         
         print('data_to_remove is not found in linked list.')
 

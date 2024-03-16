@@ -98,12 +98,13 @@ class LinkedList:
             node = node.next
             count += 1
 
-# linked_list = LinkedList()
-# linked_list.print()
-# linked_list.insert_values(["banana","mango","grapes","orange"])
-# linked_list.print()
-# linked_list.insert_at(-1, 'pineapple')
-# linked_list.insert_at(3, 'pineapple')
-# linked_list.print()
-# linked_list.remove_at(3)
-# linked_list.print()
+linked_list = LinkedList()
+linked_list.print()
+linked_list.insert_values(["banana","mango","grapes","orange"])
+linked_list.print()
+linked_list.insert_at(-1, 'pineapple')
+linked_list.insert_at(3, 'pineapple')
+linked_list.print()
+linked_list.remove_at(0)
+linked_list.remove_at(3)
+linked_list.print()
