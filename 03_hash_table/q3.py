@@ -5,12 +5,20 @@ class HashTable(hash_table.HashTable):
     def read_txt(self, txt_file_path: str):
         with open(txt_file_path, 'r') as file:
             txt_reader = file.readlines()
-            count = 0
+
             for row in txt_reader:
                 for word in row.split():
                     hash = self.__get_hash(word)
-                    self.arr[hash].append((word, count))
-                    count += 1
+
+                    found_word = False
+                    for index, element in enumerate(self.arr[hash]):
+                        if element[0] == word:
+                           self.arr[hash][index] = (word, element[1] + 1)
+                           found_word = True
+                           break
+                    
+                    if found_word == False:
+                        self.arr[hash].append((word, 1))
 
 
 hash_table = HashTable()

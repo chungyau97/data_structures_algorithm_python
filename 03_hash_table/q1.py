@@ -19,7 +19,7 @@ class HashTable(hash_table.HashTable):
     def find_first_week_avg(self):
         total_temperature = 0
 
-        for i in range(7):
+        for i in range(1, 8):
             key = self.__generate_key(str(i))
             hash = self.__get_hash(key)
             for _, element in enumerate(self.arr[hash]):
@@ -31,7 +31,7 @@ class HashTable(hash_table.HashTable):
     def find_max_of_first_10_days(self):
         max_temperature = 0
 
-        for i in range(10):
+        for i in range(1, 11):
             key = self.__generate_key(str(i))
             hash = self.__get_hash(key)
             for _, element in enumerate(self.arr[hash]):
