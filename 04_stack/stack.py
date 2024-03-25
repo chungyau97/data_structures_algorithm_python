@@ -8,7 +8,7 @@ class Stack:
         self.container.append(value)
     
     def pop(self):
-        print(self.container.pop())
+        return self.container.pop()
     
     def peek(self):
         print(self.container[-1])
@@ -17,13 +17,13 @@ class Stack:
         return len(self.container)
     
     def is_empty(self):
-        return self.size == 0
+        return self.size() == 0
     
-stack = Stack()
-stack.push('first thing')
-stack.push('second thing')
-stack.peek()
-stack.pop()
-print(stack.size())
-print(stack.is_empty())
-print(stack.container)
+# stack = Stack()
+# stack.push('first thing')
+# stack.push('second thing')
+# stack.peek()
+# stack.pop()
+# print(stack.size())
+# print(stack.is_empty())
+# print(stack.container)
