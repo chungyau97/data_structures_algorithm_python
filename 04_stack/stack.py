@@ -11,7 +11,7 @@ class Stack:
         return self.container.pop()
     
     def peek(self):
-        print(self.container[-1])
+        return self.container[-1]
     
     def size(self):
         return len(self.container)
@@ -22,7 +22,7 @@ class Stack:
 # stack = Stack()
 # stack.push('first thing')
 # stack.push('second thing')
-# stack.peek()
+# print(stack.peek())
 # stack.pop()
 # print(stack.size())
 # print(stack.is_empty())

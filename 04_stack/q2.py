@@ -23,4 +23,3 @@ print(is_parantheses_balance('))((a+b}{'))
 print(is_parantheses_balance('((a+b))'))
 print(is_parantheses_balance('))'))
 print(is_parantheses_balance('[a+b]*(x+2y)*{gg+kk}'))
-

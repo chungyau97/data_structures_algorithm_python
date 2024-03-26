@@ -15,6 +15,6 @@ class Stack(stack.Stack):
         return reverse_str
 
 stack = Stack()
-value_str = 'We will conquere COVID-19'
-reverse_str = stack.reverse_string(value_str)
-print('reverse_string("' + value_str + '") should return "' + reverse_str + '"')
+original_str = 'We will conquere COVID-19'
+reverse_str = stack.reverse_string(original_str)
+print('reverse_string ("' + original_str + '") should return "' + reverse_str + '"')
