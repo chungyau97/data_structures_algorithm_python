@@ -16,6 +16,9 @@ class Queue:
     def is_empty(self):
         return self.size() == 0
     
+    def front(self):
+        return self.container[-1]
+    
 # queue = Queue()
 # queue.enqueue('first thing')
 # queue.enqueue('second thing')
