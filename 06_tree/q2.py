@@ -19,7 +19,6 @@ class TreeNode(tree.TreeNode):
         for child in self.children:
             child.print_tree(to_level, False)
 
-
 ERROR_MESSAGE = 'Child already exist.'
 
 root_level = TreeNode('Global')

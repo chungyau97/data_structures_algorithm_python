@@ -1,9 +1,9 @@
 import tree
 
 class TreeNode(tree.TreeNode):
-    def __init__(self, name: str, parent, position: str):
+    def __init__(self, name: str, position: str):
         self.name = name
-        self.parent = parent
+        self.parent = None
         self.position = position
         self.children = []
 
@@ -26,7 +26,6 @@ class TreeNode(tree.TreeNode):
         
         return output
      
-
     def print_tree(self, choice: str, from_root: bool = True):
         if from_root == True:
             while self.parent:
@@ -42,21 +41,21 @@ class TreeNode(tree.TreeNode):
 
 ERROR_MESSAGE = 'Employee already exist.'
 
-root_level = TreeNode(name= 'Nilupul', parent= None, position= 'CEO')
-first_level = TreeNode(name='Chinmay', parent= root_level, position= 'CTO')
+root_level = TreeNode(name= 'Nilupul', position= 'CEO')
+first_level = TreeNode(name='Chinmay', position= 'CTO')
 root_level.add_child(first_level, ERROR_MESSAGE)
-second_level = TreeNode(name= 'Vishwa', parent= first_level, position= 'Infrastructure Head')
+second_level = TreeNode(name= 'Vishwa', position= 'Infrastructure Head')
 first_level.add_child(second_level, ERROR_MESSAGE)
-second_level.add_child(TreeNode(name= 'Dhaval', parent= second_level, position= 'Cloud Manager'), ERROR_MESSAGE)
-second_level.add_child(TreeNode(name='Abhijit', parent= second_level, position= 'App Manager'), ERROR_MESSAGE)
-first_level.add_child(TreeNode(name= 'Asmir', parent= first_level, position= 'Application Head'), ERROR_MESSAGE) 
-first_level = TreeNode(name= 'Gels', parent= root_level, position= 'HR Head')
+second_level.add_child(TreeNode(name= 'Dhaval', position= 'Cloud Manager'), ERROR_MESSAGE)
+second_level.add_child(TreeNode(name='Abhijit', position= 'App Manager'), ERROR_MESSAGE)
+first_level.add_child(TreeNode(name= 'Asmir', position= 'Application Head'), ERROR_MESSAGE) 
+first_level = TreeNode(name= 'Gels', position= 'HR Head')
 root_level.add_child(first_level, ERROR_MESSAGE)
-first_level.add_child(TreeNode(name= 'Peter', parent= first_level, position= 'Recruitment Manager'), ERROR_MESSAGE)
-first_level.add_child(TreeNode(name= 'waqas', parent= first_level, position= 'Policy Manager'), ERROR_MESSAGE)
+first_level.add_child(TreeNode(name= 'Peter', position= 'Recruitment Manager'), ERROR_MESSAGE)
+first_level.add_child(TreeNode(name= 'waqas', position= 'Policy Manager'), ERROR_MESSAGE)
 
 # root_level.print_tree('else')
 # print('')
 # first_level.print_tree('designation')
 # first_level.print_tree('name')
-first_level.print_tree('both')
+# first_level.print_tree('both')
